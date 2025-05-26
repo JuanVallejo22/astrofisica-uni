@@ -1,47 +1,177 @@
+/* Estilo inspirado en la web GAE Udenar */
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   margin: 0;
-  background: #0d1b2a;
-  color: #e0e1dd;
+  padding: 0;
+  background: #e9ecef;
+  color: #222;
 }
+
+/* Barra superior institucional */
+.topbar {
+  background: #0d4ea2;
+  color: #fff;
+  padding: 0.4em 0;
+  font-size: 0.97em;
+  text-align: right;
+}
+
+/* Barra de navegación principal */
 header {
-  background: #1b263b;
-  padding: 1em 0;
-  text-align: center;
-}
-header h1 {
-  margin: 0 0 0.5em 0;
-  color: #e0e1dd;
-}
-nav a {
-  color: #e0e1dd;
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: bold;
-}
-nav a:hover {
-  color: #778da9;
-}
-main {
-  max-width: 700px;
-  margin: 2em auto;
-  padding: 1em;
-  background: #1b263b;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-footer {
-  text-align: center;
-  padding: 1em 0;
-  background: #1b263b;
-  color: #e0e1dd;
-  margin-top: 2em;
-}
-.equipo-lista {
-  list-style: none;
+  background: #0d4ea2;
   padding: 0;
 }
-.equipo-lista li {
-  margin-bottom: 0.5em;
-  font-size: 1.1em;
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4em 0;
+  background: #0d4ea2;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 1.5em;
+  padding: 0.4em 0;
+  font-size: 1.12em;
+  position: relative;
+  transition: color 0.2s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #0d4ea2;
+}
+
+nav a.active::after,
+nav a:hover::after {
+  content: '';
+  display: block;
+  margin: 0.2em auto 0 auto;
+  height: 4px;
+  width: 50%;
+  background: #96c93d;
+  border-radius: 2px;
+}
+
+/* Logo institucional */
+.logo-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  padding: 1em 2em 1em 2em;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.logo-bar img {
+  height: 64px;
+  margin-right: 2em;
+}
+
+.logo-bar .uni-name {
+  font-size: 1.15em;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Sección principal */
+.main-header {
+  background: #6da3db;
+  padding: 2.5em 0 1.5em 0;
+  text-align: center;
+}
+
+.main-header h2 {
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 500;
+  margin: 0 0 0.2em 0;
+}
+
+.main-header h1 {
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  margin: 0.1em 0;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.main-header .sub {
+  color: #96c93d;
+  font-size: 2.3em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.main-header img {
+  margin: 2em 0 1em 0;
+  max-width: 280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tarjeta de presentación */
+.card {
+  max-width: 900px;
+  background: #fff;
+  margin: -2.5em auto 2em auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  padding: 2.5em 2.5em 2.2em 2.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.card h3 {
+  color: #2062a2;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.card p {
+  color: #333;
+  font-size: 1.15em;
+  line-height: 1.6;
+}
+
+/* Pie de página */
+footer {
+  background: #0d4ea2;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .main-header h1 {
+    font-size: 2.2em;
+  }
+  .main-header .sub {
+    font-size: 1.2em;
+  }
+  .card {
+    padding: 1em;
+  }
+  .logo-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 1em;
+  }
+  .logo-bar img {
+    margin-bottom: 0.6em;
+  }
 }
